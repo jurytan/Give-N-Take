@@ -6,7 +6,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -60,8 +59,10 @@ public class MainActivity extends AppCompatActivity {
       fab.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View view) {
-              Log.e("MainActivity", "[onCreate()] Setting the onClickListener!");
-              testAction(view);
+              Log.i("MainActivity", "[onCreate] Setting the onClickListener!");
+              //testAction(view);
+              Intent intent = new Intent(MainActivity.this, NewRecord.class);
+              startActivity(intent);
           }
       });
 
