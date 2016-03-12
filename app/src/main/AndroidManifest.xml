@@ -19,10 +19,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NewRecord"
-            android:label="New Record"
-            android:theme="@style/AppTheme.NoActionBar">
-            >
+            android:name=".NewRecordActivity"
+            android:label="New Record" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.nguyeningcode.jnguyen7410.give_n_take.MainActivity" />
         </activity>
     </application>
 

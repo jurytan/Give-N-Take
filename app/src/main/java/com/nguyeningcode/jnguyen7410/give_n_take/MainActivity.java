@@ -42,8 +42,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        /*Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        */
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -60,9 +61,7 @@ public class MainActivity extends AppCompatActivity {
           @Override
           public void onClick(View view) {
               Log.i("MainActivity", "[onCreate] Setting the onClickListener!");
-              //testAction(view);
-              Intent intent = new Intent(MainActivity.this, NewRecord.class);
-              startActivity(intent);
+              testAction(view);
           }
       });
 
@@ -70,7 +69,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void testAction(View view) {
         //Snackbar.make(view, "Test Action", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
-        Intent intent = new Intent(this, NewRecord.class);
+        Intent intent = new Intent(this, NewRecordActivity.class);
+        startActivity(intent);
     }
 
     @Override
