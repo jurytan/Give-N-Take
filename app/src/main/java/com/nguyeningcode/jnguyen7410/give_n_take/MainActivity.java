@@ -1,5 +1,6 @@
 package com.nguyeningcode.jnguyen7410.give_n_take;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -67,8 +68,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void testAction(View view) {
-        Snackbar.make(view, "Test Action", Snackbar.LENGTH_SHORT)
-                .setAction("Action", null).show();
+        //Snackbar.make(view, "Test Action", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
+        Intent intent = new Intent(this, NewRecord.class);
     }
 
     @Override
@@ -123,11 +124,11 @@ public class MainActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return "HISTORY";
                 case 1:
-                    return "SECTION 2";
+                    return "CALENDAR";
                 case 2:
-                    return "SECTION 3";
+                    return "CONTACTS";
             }
             return null;
         }
