@@ -19,16 +19,6 @@ public class NewRecordActivity extends AppCompatActivity {
         Log.i("NewRecordActivity", "[onCreate] getSupportActionBar() = " + getSupportActionBar());
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Log.i("NewRecordActivity", "[onCreate] Creating the database...");
-        SQLiteDatabase database = openOrCreateDatabase("Something", MODE_PRIVATE, null);
-
-        database.execSQL("CREATE TABLE IF NOT EXISTS Transaction" +
-                "(transaction_id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "from TEXT, to TEXT, item TEXT, qty INTEGER, " +
-                "favorite TEXT NOT NULL CHECK (typeof(\"favorite\") = \"text\" AND \"favorite\" IN (\"TRUE\", \"FALSE\")), " +
-                "description TEXT, borrowed INTEGER, will_return INTEGER, category INTEGER, color TEXT");
-
-
 
     }
 
