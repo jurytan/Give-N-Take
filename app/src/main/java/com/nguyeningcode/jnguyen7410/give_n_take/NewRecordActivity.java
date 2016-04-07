@@ -14,6 +14,7 @@ public class NewRecordActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.i("NewRecordActivity", "[onCreate] Successfully entered activity!");
+        
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_record);
         Log.i("NewRecordActivity", "[onCreate] getSupportActionBar() = " + getSupportActionBar());
