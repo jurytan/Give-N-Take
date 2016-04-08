@@ -35,7 +35,7 @@ public class NewRecordActivity extends AppCompatActivity {
     }
 
     public void saveRecord(View view) {
-        Snackbar.make(view, "Saving...", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
+        //Snackbar.make(view, "Saving...", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }

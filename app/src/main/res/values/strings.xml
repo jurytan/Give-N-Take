@@ -66,6 +66,20 @@
 
     <!-- New Record Form -->
     <string name="record_name">Name of Item</string>
-    <string name="record_quantity">Quantity</string>
+    <string name="record_qty">Quantity</string>
+    <string name="record_desc">Description</string>
+    <string name="record_borrowDate">Borrowed Date</string>
+    <string name="record_returnDate">Return Date</string>
+
+    <string-array name="category_spinner">
+        <item>General</item>
+        <item>Personal</item>
+        <item>Work</item>
+        <item>Games</item>
+        <item>Starred</item>
+        <item>Low Priority</item>
+        <item>Other</item>
+    </string-array>
+
 
 </resources>
