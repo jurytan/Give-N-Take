@@ -60,14 +60,14 @@ public class MainActivity extends AppCompatActivity {
       fab.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View view) {
-              Log.i("MainActivity", "[onCreate] Setting the onClickListener!");
-              testAction(view);
+              Log.i("MainActivity", "[onCreate] Setting the onClickListener for FAB!");
+              createRecord(view);
           }
       });
 
     }
 
-    public void testAction(View view) {
+    public void createRecord(View view) {
         //Snackbar.make(view, "Test Action", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
         Intent intent = new Intent(this, NewRecordActivity.class);
         startActivity(intent);

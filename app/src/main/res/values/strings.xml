@@ -66,5 +66,6 @@
 
     <!-- New Record Form -->
     <string name="record_name">Name of Item</string>
+    <string name="record_quantity">Quantity</string>
 
 </resources>
