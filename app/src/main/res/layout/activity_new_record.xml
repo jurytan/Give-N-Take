@@ -68,10 +68,10 @@
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/input_record_borrowDate"
-                android:inputType="date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/record_borrowDate" />
+                android:hint="@string/record_borrowDate"
+                android:onClick="showDatePickerDialog"/>
 
         </android.support.design.widget.TextInputLayout>
 
@@ -82,10 +82,10 @@
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/input_record_returnDate"
-                android:inputType="date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/record_returnDate" />
+                android:hint="@string/record_returnDate"
+                android:onClick="showDatePickerDialog"/>
 
         </android.support.design.widget.TextInputLayout>
 
