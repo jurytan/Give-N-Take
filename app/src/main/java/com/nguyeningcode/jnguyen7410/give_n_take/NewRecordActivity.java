@@ -29,6 +29,7 @@ import java.util.Date;
 public class NewRecordActivity extends AppCompatActivity {
 
     DatePicker datePicker;
+    public static TextInputEditText callingView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,11 +50,11 @@ public class NewRecordActivity extends AppCompatActivity {
         });
 
         TextInputEditText borrowField = (TextInputEditText) findViewById(R.id.input_record_borrowDate);
-        Log.e("NewRecordActivity", "borrowField = " + (R.id.input_record_borrowDate) );
+        //Log.e("NewRecordActivity", "borrowField = " + (R.id.input_record_borrowDate) );
         TextInputEditText returnField = (TextInputEditText) findViewById(R.id.input_record_returnDate);
-        Log.e("NewRecordActivity", "returnField = " + (R.id.input_record_returnDate) );
-        String today = getToday();
-        borrowField.setText(today);
+        //Log.e("NewRecordActivity", "returnField = " + (R.id.input_record_returnDate) );
+
+        borrowField.setText(getToday());
 
         borrowField.setInputType(InputType.TYPE_NULL);
         returnField.setInputType(InputType.TYPE_NULL);
@@ -61,6 +62,8 @@ public class NewRecordActivity extends AppCompatActivity {
     }
 
     public void showDatePickerDialog(View v) {
+        callingView = (TextInputEditText) v;
+        Log.e("NewRecordActivity", "callingView = " + callingView.getId());
         DialogFragment datePicker = new DatePickerFragment();
         datePicker.show(getSupportFragmentManager(), "datePicker");
     }
@@ -106,7 +109,12 @@ public class NewRecordActivity extends AppCompatActivity {
 
         public void onDateSet(DatePicker view, int year, int month, int day) {
             // Do something with the date chosen by the user
-            Log.e("NewRecordActivity" , "View = " + view.getId() + ", year = " + year + ", month = " + month + ", day = " + day);
+            //Log.e("NewRecordActivity" , "View = " + view.getId() + ", year = " + year + ", month = " + month + ", day = " + day);
+            Calendar c = Calendar.getInstance();
+            c.set(year, month, day);
+
+            SimpleDateFormat df = new SimpleDateFormat("MM-dd-yyyy");
+            callingView.setText(df.format(c.getTime()));
         }
     }
 
