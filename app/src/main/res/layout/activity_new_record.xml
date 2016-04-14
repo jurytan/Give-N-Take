@@ -17,6 +17,17 @@
         android:paddingTop="20dp"
         >
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:maxHeight="200dp"
+            android:src="@drawable/ic_add_a_photo_black_24dp"
+            android:contentDescription="@string/record_image_alt_desc"
+            />
+
+
         <android.support.design.widget.TextInputLayout
             android:id="@+id/nr_input_layout_name"
             android:layout_width="match_parent"

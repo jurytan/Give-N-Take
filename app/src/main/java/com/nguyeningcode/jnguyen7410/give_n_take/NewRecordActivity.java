@@ -59,6 +59,8 @@ public class NewRecordActivity extends AppCompatActivity {
         borrowField.setInputType(InputType.TYPE_NULL);
         returnField.setInputType(InputType.TYPE_NULL);
 
+
+
     }
 
     public void showDatePickerDialog(View v) {

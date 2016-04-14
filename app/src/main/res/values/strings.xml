@@ -70,6 +70,7 @@
     <string name="record_desc">Description</string>
     <string name="record_borrowDate">Borrowed Date</string>
     <string name="record_returnDate">Return Date</string>
+    <string name="record_image_alt_desc">Image of Item Borrowed</string>
 
     <string-array name="category_spinner">
         <item>General</item>
