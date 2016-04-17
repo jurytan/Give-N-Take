@@ -2,28 +2,21 @@ package com.nguyeningcode.jnguyen7410.give_n_take;
 
 //import android.content.Intent;
 import android.app.DatePickerDialog;
-import android.app.Dialog;
-
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
-
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.DatePicker;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 //import android.view.View;
 
 public class NewRecordActivity extends AppCompatActivity {
@@ -58,7 +51,6 @@ public class NewRecordActivity extends AppCompatActivity {
 
         borrowField.setInputType(InputType.TYPE_NULL);
         returnField.setInputType(InputType.TYPE_NULL);
-
 
 
     }

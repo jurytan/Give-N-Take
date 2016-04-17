@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_id": "give-n-take-ad949",
+    "project_number": "496988199445",
+    "name": "Give-N-Take"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496988199445:android:a3e82c6b5b2de2f8",
+        "client_id": "android:com.nguyeningcode.jnguyen7410.give_n_take",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.nguyeningcode.jnguyen7410.give_n_take",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "496988199445-qduduhl9p1t3u6j55t35cfm0350bgavs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nguyeningcode.jnguyen7410.give_n_take",
+            "certificate_hash": "49E897400CB9A5A8402C01799C079819BC2098C7"
+          }
+        },
+        {
+          "client_id": "496988199445-l7f7ttnd2la2m63jce3mn4dqs0ejprno.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 2,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}
