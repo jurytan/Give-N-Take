@@ -1,6 +1,5 @@
 package com.nguyeningcode.jnguyen7410.give_n_take;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -19,13 +18,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.google.android.gms.auth.api.Auth;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.api.GoogleApiClient;
 
-public class MainActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener, View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -41,11 +35,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
-    private static final String TAG = "LoginActivity";
-    private static final int SIGN_IN_CODE = 9001;
-    private GoogleApiClient mGoogleApiClient;
-    private ProgressDialog mProgressDialog;
-    private GoogleSignInAccount account;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,23 +63,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
               createRecord(view);
           }
         });
-
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build();
-
-        mGoogleApiClient = new GoogleApiClient.Builder(this)
-                .enableAutoManage(this , this)
-                .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
-                .build();
-
-
-        GoogleApiClient.OnConnectionFailedListener failedListener = new GoogleApiClient.OnConnectionFailedListener() {
-            @Override
-            public void onConnectionFailed(ConnectionResult connectionResult) {
-                // Do something on failure
-            }
-        };
 
     }
 
@@ -121,17 +93,13 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             return true;
         }
 
+        if (id == R.id.action_login) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onConnectionFailed(ConnectionResult connectionResult) {
-
-    }
-
-    @Override
-    public void onClick(View v) {
-        
     }
 
     /**
