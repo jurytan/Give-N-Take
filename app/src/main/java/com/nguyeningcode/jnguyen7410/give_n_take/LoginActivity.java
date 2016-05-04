@@ -20,15 +20,10 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -40,7 +35,6 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.OptionalPendingResult;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.Status;
-import com.google.android.gms.plus.PlusShare;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -86,32 +80,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         setupActionBar();
-        // Set up the login form.
-        mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
-        populateAutoComplete();
-
-        mPasswordView = (EditText) findViewById(R.id.password);
-        mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-                if (id == R.id.login || id == EditorInfo.IME_NULL) {
-                    attemptLogin();
-                    return true;
-                }
-                return false;
-            }
-        });
-
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
-        mEmailSignInButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                attemptLogin();
-            }
-        });
-
-        mLoginFormView = findViewById(R.id.login_form);
-        mProgressView = findViewById(R.id.login_progress);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -132,11 +100,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         Intent intent = getIntent();
         String nameSurname = intent.getStringExtra("displayname");
         String imageUrl = intent.getStringExtra("imageurl");
-        TextView displayName = (TextView)findViewById(R.id.nameSurnameText);
-        displayName.setText("" + nameSurname);
+//        TextView displayName = (TextView)findViewById(R.id.nameSurnameText);
+//        displayName.setText("" + nameSurname);
 
-        Button shareButton = (Button) findViewById(R.id.share_button);
-        shareButton.setOnClickListener(this);
+//        Button shareButton = (Button) findViewById(R.id.share_button);
+//        shareButton.setOnClickListener(this);
     }
 
     @Override
@@ -221,12 +189,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             case R.id.sign_out_button:
                 signOut();
                 break;
-            case R.id.share_button:
-                Intent shareIntent = new PlusShare.Builder(this)
-                        .setType("text/plain")
-                        .getIntent();
-                startActivityForResult(shareIntent, 0);
-                break;
+//            case R.id.share_button:
+//                Intent shareIntent = new PlusShare.Builder(this)
+//                        .setType("text/plain")
+//                        .getIntent();
+//                startActivityForResult(shareIntent, 0);
+//                break;
         }
     }
 
