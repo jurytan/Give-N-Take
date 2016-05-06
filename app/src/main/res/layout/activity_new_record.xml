@@ -25,6 +25,7 @@
             android:maxHeight="200dp"
             android:src="@drawable/ic_add_a_photo_black_24dp"
             android:contentDescription="@string/record_image_alt_desc"
+            android:onClick=""
             />
 
 
